@@ -10,10 +10,16 @@ h1 -> My first react project
 p -> this is my first react learning code
 */
 
-ReactDOM.render(
-    <div>
-        <h1>My first react project</h1>
-        <p>this is my first react learning code</p>
-    </div>,
-    document.getElementById("root")
-);
+// ReactDOM.render(
+//     <div>
+//         <h1>My first react project</h1>
+//         <p>this is my first react learning code</p>
+//     </div>,
+//     document.getElementById("root")
+// );
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<div>
+    <h1>My first react project</h1>
+    <p>this is my first react learning code</p>
+</div>);
