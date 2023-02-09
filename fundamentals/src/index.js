@@ -7,13 +7,29 @@ My first react project
   • Call My Name
   • My Address
 */
-function Header() {
-  return (
+
+function MainHeader() {
+  return(
+  <h1>Tutorial React</h1>
+  ) 
+      
+}
+
+function SubHeader(){
+  return(
+    <p>this will be an exciting course</p>
+  ) 
+}
+
+function Header(){
+  return(
     <div>
-      <h1>Tutorial React</h1>
+      <MainHeader />
+      <SubHeader />
     </div>
   )
 }
+
 function MainBody() {
   return (
     <div>
