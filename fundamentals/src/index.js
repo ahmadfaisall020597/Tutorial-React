@@ -7,11 +7,17 @@ My first react project
   • Call My Name
   • My Address
 */
-
+function Header() {
+  return (
+    <div>
+      <h1>Tutorial React</h1>
+    </div>
+  )
+}
 function MainBody() {
   return (
     <div>
-      <h1>My first react project</h1>
+      <h3>My first react project</h3>
       <ul>
         <li>Call My Name</li>
         <li>My address</li>
@@ -23,7 +29,7 @@ function MainBody() {
 function Dummy() {
   return (
     <div>
-      <h1>Biodata</h1>
+      <h3>Biodata</h3>
       <ul>
         <li>
           <span>Name : </span><span>Faisal</span>
@@ -34,10 +40,20 @@ function Dummy() {
   )
 }
 
+function Footer() {
+  return (
+    <div>
+      <p>Happy Coding !</p>
+    </div>
+  )
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
+    <Header />
     <MainBody />
     <Dummy />
+    <Footer />
   </div>
 );
