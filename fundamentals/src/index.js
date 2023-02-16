@@ -10,7 +10,7 @@ My first react project
 
 function MainHeader() {
   return (
-    <h1>Tutorial React</h1>
+    <h1 className='text-primary'>Tutorial React</h1>
   )
 }
 
