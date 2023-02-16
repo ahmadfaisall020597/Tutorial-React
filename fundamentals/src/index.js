@@ -36,26 +36,14 @@ function Header() {
 }
 
 function MainBody() {
-  return (
-    <div>
-      <h3>My first react project</h3>
-      <ul>
-        <li>Call My Name</li>
-        <li>My address</li>
-      </ul>
-    </div>
-  )
-}
+  const whatWeWillLearn = "React JS";
 
-function Dummy() {
   return (
     <div>
-      <h3>Biodata</h3>
+      <h3>In this, we will learn { whatWeWillLearn } by building faisal</h3>
       <ul>
-        <li>
-          <span>Name : </span><span>Faisal</span>
-        </li>
-        <li><span>Address : </span> <span>Kemang</span></li>
+        <li>Basic Foundation</li>
+        <li>Functional and Class Components</li>
       </ul>
     </div>
   )
@@ -74,7 +62,6 @@ root.render(
   <div>
     <Header />
     <MainBody />
-    <Dummy />
     <Footer />
   </div>
 );
