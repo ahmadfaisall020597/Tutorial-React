@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "./CSS/styles.css"
 
 /* 
 Task React
@@ -10,7 +11,7 @@ My first react project
 
 function MainHeader() {
   return (
-    <h1 className='text-primary'>Tutorial React</h1>
+    <h1 className='heading1'>Tutorial React</h1>
   )
 }
 
