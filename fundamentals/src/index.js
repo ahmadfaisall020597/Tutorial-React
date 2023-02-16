@@ -47,13 +47,17 @@ function MainBody() {
         <li>Basic Foundation</li>
         <li>Functional and Class Components</li>
       </ul>
+      <div>
+        Enter Task : {" "} 
+        <input maxLength={8} readOnly={false} placeholder="Enter your input"></input>
+      </div>
     </div>
   )
 }
 
 function Footer() {
   return (
-    <div>
+    <div className='pt-3'>
       <p style={{ color: "gray", backgroundColor: "black" }}>Happy Coding !</p>
     </div>
   )
