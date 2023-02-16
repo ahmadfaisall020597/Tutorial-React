@@ -37,10 +37,12 @@ function Header() {
 
 function MainBody() {
   const whatWeWillLearn = "React JS";
+  const lectureCount = 3;
 
   return (
     <div>
       <h3>In this, we will learn { whatWeWillLearn } by building faisal</h3>
+      <p>Total Lecture = { lectureCount }</p>
       <ul>
         <li>Basic Foundation</li>
         <li>Functional and Class Components</li>
