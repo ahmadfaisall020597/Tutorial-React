@@ -9,20 +9,24 @@ My first react project
 */
 
 function MainHeader() {
-  return(
-  <h1>Tutorial React</h1>
-  ) 
-      
+  return (
+    <h1>Tutorial React</h1>
+  )
 }
 
-function SubHeader(){
-  return(
-    <p>this will be an exciting course</p>
-  ) 
+const subHeaderStyle = {
+  color: "blueviolet",
+  backgroundColor: "lightgray"
 }
 
-function Header(){
-  return(
+function SubHeader() {
+  return (
+    <p style={subHeaderStyle}>this will be an exciting course</p>
+  )
+}
+
+function Header() {
+  return (
     <div>
       <MainHeader />
       <SubHeader />
@@ -59,7 +63,7 @@ function Dummy() {
 function Footer() {
   return (
     <div>
-      <p>Happy Coding !</p>
+      <p style={{ color: "gray", backgroundColor: "black" }}>Happy Coding !</p>
     </div>
   )
 }
