@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "./CSS/styles.css"
 import Header from './Header';
+import Students from './Students';
 
 /* 
 Task React
@@ -25,30 +26,6 @@ function MainBody() {
       <div>
         Enter Task : {" "}
         <input maxLength={8} readOnly={false} placeholder="Enter your input"></input>
-      </div>
-    </div>
-  )
-}
-
-function Students() {
-  const fullName = "Ahmad Faisal"
-  const programmingExp = 3;
-  return (
-    <div className='container p-4'>
-      <div className='row'>
-        Students Enrolled
-      </div>
-      <div className='row border'>
-        <div className='col-1'>
-          <img src={`https://ui-avatars.com/api/?name=${fullName}`}
-            className='w-100'>
-          </img>
-        </div>
-        <div className='col-10'>
-          {fullName}
-          <br />
-          Programming Experience {programmingExp} years
-        </div>
       </div>
     </div>
   )
