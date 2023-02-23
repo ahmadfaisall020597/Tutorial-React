@@ -41,13 +41,13 @@ function Footer() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div className='container'>
+  <div>
     <Header />
     <MainBody />
-    <div className='row'>Students Enrolled</div>
+    <div className='container row'>Students Enrolled</div>
     <Student experience={2} name="Ahmad Faisal" headshot="https://api.lorem.space/image/face?w=150&h=150" />
-    <Student experience={5} name="T. Muller" headshot="https://api.lorem.space/image/face?w=150&h=150" />
-    <Student experience={7} name="Neuer" headshot="https://api.lorem.space/image/face?w=150&h=150" />
+    <Student experience={5} name="T. Muller" headshot="https://api.lorem.space/image/face?w=150&h=151" />
+    <Student experience={7} name="Neuer" headshot="https://api.lorem.space/image/face?w=150&h=152" />
     <Footer />
   </div>
 );

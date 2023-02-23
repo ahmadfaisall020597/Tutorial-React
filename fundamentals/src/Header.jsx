@@ -1,7 +1,14 @@
+import logo from '../src/Images/logo192.png';
+
 export default function Header() {
     function MainHeader() {
         return (
-            <h1 className='heading1'>Tutorial React</h1>
+            <div className='py-2 px-2' style={{backgroundColor:'black'}}>
+                <img src={logo} style={{height:'50px', verticalAlign:'top'}}></img>
+                <span className='h2 px-3 py-2 text-white-50'>
+                    Tutorial React JS
+                </span>
+            </div>
         )
     }
 
