@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "./CSS/styles.css"
 import Header from './Header';
-import Students from './Students';
+import Student from './Student';
 
 /* 
 Task React
@@ -41,10 +41,13 @@ function Footer() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
+  <div className='container'>
     <Header />
     <MainBody />
-    <Students />
+    <div className='row'>Students Enrolled</div>
+    <Student experience={2} name="Ahmad Faisal" />
+    <Student experience={5} name="T. Muller" />
+    <Student experience={7} name="Neuer" />
     <Footer />
   </div>
 );
