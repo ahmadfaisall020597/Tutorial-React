@@ -1,4 +1,5 @@
 import Student from "./Student";
+import StudentReview from "./StudentReview";
 
 export default function MainBody() {
     const whatWeWillLearn = "React JS";
@@ -17,9 +18,15 @@ export default function MainBody() {
                 <input maxLength={8} readOnly={false} placeholder="Enter your input"></input>
             </div> */}
             <div className='container row'>Students Enrolled</div>
-            <Student experience={2} name="Ahmad Faisal" headshot="https://api.lorem.space/image/face?w=150&h=150" />
-            <Student experience={5} name="T. Muller" headshot="https://api.lorem.space/image/face?w=150&h=151" />
-            <Student experience={7} name="Neuer" headshot="https://api.lorem.space/image/face?w=150&h=152" />
+            <Student experience={2} name="Ahmad Faisal" headshot="https://api.lorem.space/image/face?w=150&h=150">
+                <StudentReview />
+            </Student>
+            <Student experience={5} name="T. Muller" headshot="https://api.lorem.space/image/face?w=150&h=151">
+                <StudentReview />
+            </Student>
+            <Student experience={7} name="Neuer" headshot="https://api.lorem.space/image/face?w=150&h=152">
+                <StudentReview />
+            </Student>
         </div>
     )
 }

@@ -7,10 +7,13 @@ export default function Student(props) {
                         className='w-100 py-2'>
                     </img>
                 </div>
-                <div className='col-10'>
+                <div className='col-8'>
                     {props.name}
                     <br />
                     Programming Experience {props.experience} years
+                </div>
+                <div className="col-2">
+                    {props.children}
                 </div>
             </div>
         </div>
