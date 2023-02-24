@@ -1,4 +1,4 @@
-import logo from '../src/Images/logo192.png';
+import logo from '../Images/logo192.png';
 
 export default function Header() {
     function MainHeader() {
@@ -19,7 +19,7 @@ export default function Header() {
 
     function SubHeader() {
         return (
-            <p style={subHeaderStyle}>this will be an exciting course</p>
+            <p style={subHeaderStyle} className="text-center">this will be an exciting course</p>
         )
     }
 
