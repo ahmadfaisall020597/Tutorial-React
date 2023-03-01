@@ -9,6 +9,8 @@ export default class Counter extends React.Component {
         this.handleDefence = this.handleDefence.bind(this);
         this.state = {
             count: 0,
+            gameStatus: "",
+            lastPlay: "",
         };
     }
 
@@ -17,6 +19,8 @@ export default class Counter extends React.Component {
             let newCount = previousState.count + Math.round(Math.random() * 10);
             return {
                 count: newCount,
+                lastPlay: "Attack",
+                gameStatus: newCount > 10 ? "You Won!!" : previousState.gameStatus,
             }
         })
     }
@@ -26,6 +30,8 @@ export default class Counter extends React.Component {
             let newCount = previousState.count - Math.round(Math.random() * 10);
             return {
                 count: newCount,
+                lastPlay: "Defence",
+                gameStatus: newCount < -10 ? "You Lose!!" : previousState.gameStatus,
             }
         })
     }
@@ -43,6 +49,8 @@ export default class Counter extends React.Component {
         this.setState(() => {
             return {
                 count: 0,
+                gameStatus: "",
+                lastPlay: "",
             }
         })
     }
