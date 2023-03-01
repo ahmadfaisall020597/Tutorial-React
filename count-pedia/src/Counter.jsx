@@ -63,7 +63,8 @@ export default class Counter extends React.Component {
                 <p>Last Play:{this.state.lastPlay} </p>
                 <h3>Game Status : {this.state.gameStatus}</h3>
                 <div className="col-6 col-md-3 offset-md-3">
-                    <img
+                    <img 
+                        alt="attack"
                         style={{
                             width: "100%",
                             cursor: "pointer",
@@ -76,6 +77,7 @@ export default class Counter extends React.Component {
                 </div>
                 <div className="col-6 col-md-3 ">
                     <img
+                        alt="defence"
                         style={{
                             width: "100%",
                             cursor: "pointer",
