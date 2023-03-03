@@ -49,7 +49,9 @@ class ContactIndex extends React.Component {
                             <RemoveAllContact />
                         </div>
                         <div className="row py-2">
-                            <AddContact />
+                            <div className="col-8 offset-2 row">
+                                <AddContact />
+                            </div>
                         </div>
                         <div className="row py-2">
                             <FavoriteContacts
