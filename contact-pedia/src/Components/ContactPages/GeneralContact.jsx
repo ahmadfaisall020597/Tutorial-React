@@ -1,9 +1,11 @@
-export default function GeneralContact() {
+import Contact from "./Contact"
+
+export default function GeneralContact(props) {
     return (
         <div>
-            <button className="btn btn-secondary form-control">
-                General Contact
-            </button>
+            {props.contacts.map((contact, index) => (
+                <Contact contact={contact} key={index}></Contact>
+            ))}
         </div>
     )
 }

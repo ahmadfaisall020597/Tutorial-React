@@ -7,30 +7,70 @@ import FavoriteContacts from "./FavoriteContact";
 import GeneralContacts from "./GeneralContact";
 import RemoveAllContact from "./RemoveAllContact";
 
-export default function ContactIndex() {
-    return (
-        <div>
-            <Header />
-            <div className="container" style={{ minHeight: "85vh" }}>
-                <div className="row py-3">
-                    <div className="col-4 offset-2">
-                        <AddRandomContact />
-                    </div>
-                    <div className="col-4">
-                        <RemoveAllContact />
-                    </div>
-                    <div className="row py-2">
-                        <AddContact />
-                    </div>
-                    <div className="row py-2">
-                        <FavoriteContacts />
-                    </div>
-                    <div className="row py-2">
-                        <GeneralContacts />
+class ContactIndex extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            contactList: [
+                {
+                    id: 1,
+                    name: "Faisal",
+                    phone: "081383422xxx",
+                    email: "faisal@gmail.com",
+                    isFavorite: false,
+                },
+                {
+                    id: 2,
+                    name: "Ahmad",
+                    phone: "08134268xxx",
+                    email: "ahmad@gmail.com",
+                    isFavorite: true,
+                },
+                {
+                    id: 3,
+                    name: "Raisa",
+                    phone: "081327826xxx",
+                    email: "raisa@gmail.com",
+                    isFavorite: true,
+                },
+            ],
+        };
+    }
+    render() {
+        return (
+            <div>
+                <Header />
+                <div className="container" style={{ minHeight: "85vh" }}>
+                    <div className="row py-3">
+                        <div className="col-4 offset-2">
+                            <AddRandomContact />
+                        </div>
+                        <div className="col-4">
+                            <RemoveAllContact />
+                        </div>
+                        <div className="row py-2">
+                            <AddContact />
+                        </div>
+                        <div className="row py-2">
+                            <FavoriteContacts
+                                contacts={this.state.contactList.filter(
+                                    (u) => u.isFavorite === true
+                                )}
+                            />
+                        </div>
+                        <div className="row py-2">
+                            <GeneralContacts
+                                contacts={this.state.contactList.filter(
+                                    (u) => u.isFavorite === false
+                                )}
+                            />
+                        </div>
                     </div>
                 </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
-    )
+        )
+    }
 }
+
+export default ContactIndex;

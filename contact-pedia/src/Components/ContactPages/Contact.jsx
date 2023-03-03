@@ -1,7 +1,9 @@
-export default function Contact() {
+export default function Contact(props) {
     return (
         <div>
-            <button className="btn btn-secondary form-control">Contact</button>
+            <button className="btn btn-secondary form-control">
+                {props.contact.name}
+            </button>
         </div>
     )
 }

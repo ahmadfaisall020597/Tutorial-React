@@ -1,7 +1,11 @@
-export default function FavoriteContact() {
+import Contact from "./Contact";
+
+export default function FavoriteContact(props) {
     return (
         <div>
-            <button className="btn btn-secondary form-control">Favorite Contact</button>
+            {props.contacts.map((contact, index) => (
+                <Contact contact={contact} key={index}></Contact>
+            ))}
         </div>
     )
 }
