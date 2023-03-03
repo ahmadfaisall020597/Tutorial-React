@@ -1,7 +1,7 @@
 export default function Contact() {
     return (
-        <>
-            Contact
-        </>
+        <div>
+            <button className="btn btn-secondary form-control">Contact</button>
+        </div>
     )
 }

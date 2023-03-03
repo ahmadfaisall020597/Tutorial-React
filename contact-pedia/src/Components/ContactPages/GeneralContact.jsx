@@ -1,7 +1,9 @@
 export default function GeneralContact() {
     return (
-        <>
-            General Contact
-        </>
+        <div>
+            <button className="btn btn-secondary form-control">
+                General Contact
+            </button>
+        </div>
     )
 }

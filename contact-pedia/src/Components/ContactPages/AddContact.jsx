@@ -1,7 +1,7 @@
 export default function AddContact() {
     return (
-        <>
-            Add Contact
-        </>
+        <div>
+            <button className="btn btn-secondary form-control">Add Contact</button>
+        </div>
     )
 }

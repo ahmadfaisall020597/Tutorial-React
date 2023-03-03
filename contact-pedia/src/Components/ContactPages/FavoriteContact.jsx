@@ -1,7 +1,7 @@
 export default function FavoriteContact() {
     return (
-        <>
-            Favorite Contact
-        </>
+        <div>
+            <button className="btn btn-secondary form-control">Favorite Contact</button>
+        </div>
     )
 }
