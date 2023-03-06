@@ -89,6 +89,19 @@ class ContactIndex extends React.Component {
         })
     }
 
+    handleAddRandomContact = (newContact) => {
+        const newFinalContact = {
+            ...newContact,
+            id: this.setState.contactList[this.state.contactList.length -1].id + 1,
+            isFavorite: false,
+        };
+        this.setState((prevState) => {
+            return {
+                contactList: prevState.contactList.concat([newFinalContact])
+            }
+        })
+    }
+
     render() {
         return (
             <div>
@@ -96,9 +109,9 @@ class ContactIndex extends React.Component {
                 <div className="container" style={{ minHeight: "85vh" }}>
                     <div className="row py-3">
                         <div className="col-4 offset-2">
-                            <AddRandomContact />
+                            <AddRandomContact handleAddRandomContact={this.handleAddRandomContact}/>
                         </div>
-                        <div className="col-4">
+                        <div className="col-4 row">
                             <RemoveAllContact />
                         </div>
                         <div className="row py-2">
