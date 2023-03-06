@@ -14,6 +14,7 @@ export default function FavoriteContact(props) {
                         key={index}
                         favoriteClick={props.favoriteClick}
                         deleteContact={props.deleteContact}
+                        updateClick={props.updateClick}
                     ></Contact>
                 ))}
             </div>
