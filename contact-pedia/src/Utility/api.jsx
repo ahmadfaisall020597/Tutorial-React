@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 const getRandomUser = async () => {
     const response = await axios.get(
@@ -9,8 +9,8 @@ const getRandomUser = async () => {
                 size: 1,
             },
         }
-    )
+    );
     return response;
-}
+};
 
 export { getRandomUser };

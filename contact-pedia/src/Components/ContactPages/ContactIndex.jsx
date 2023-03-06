@@ -92,15 +92,15 @@ class ContactIndex extends React.Component {
     handleAddRandomContact = (newContact) => {
         const newFinalContact = {
             ...newContact,
-            id: this.setState.contactList[this.state.contactList.length -1].id + 1,
+            id: this.state.contactList[this.state.contactList.length - 1].id + 1,
             isFavorite: false,
         };
         this.setState((prevState) => {
             return {
-                contactList: prevState.contactList.concat([newFinalContact])
-            }
-        })
-    }
+                contactList: prevState.contactList.concat([newFinalContact]),
+            };
+        });
+    };
 
     render() {
         return (
@@ -109,14 +109,17 @@ class ContactIndex extends React.Component {
                 <div className="container" style={{ minHeight: "85vh" }}>
                     <div className="row py-3">
                         <div className="col-4 offset-2">
-                            <AddRandomContact handleAddRandomContact={this.handleAddRandomContact}/>
+                            <AddRandomContact
+                                handleAddRandomContact={this.handleAddRandomContact}
+                            />
                         </div>
                         <div className="col-4 row">
                             <RemoveAllContact />
                         </div>
                         <div className="row py-2">
                             <div className="col-8 offset-2 row">
-                                <AddContact handleAddContact={this.handleAddContact} />
+                                <AddContact
+                                    handleAddContact={this.handleAddContact} />
                             </div>
                         </div>
                         <div className="row py-2">
@@ -125,7 +128,7 @@ class ContactIndex extends React.Component {
                                     (u) => u.isFavorite === true
                                 )}
                                 favoriteClick={this.handleToggleFavorites}
-                                deleteContact = {this.handleDeleteContact}
+                                deleteContact={this.handleDeleteContact}
                             />
                         </div>
                         <div className="row py-2">
