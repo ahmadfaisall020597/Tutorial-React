@@ -1,7 +1,12 @@
-export default function RemoveAllContact() {
+export default function RemoveAllContact(props) {
     return (
         <div>
-            <button className="btn btn-danger form-control">Remove All</button>
+            <button
+                className="btn btn-danger form-control"
+                onClick={() => props.handleRemoveAllContact()}
+            >
+                Remove All
+            </button>
         </div>
     )
 }
