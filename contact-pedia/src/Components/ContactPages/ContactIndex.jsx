@@ -69,6 +69,7 @@ class ContactIndex extends React.Component {
     };
 
     handleUpdateContact = (updatedContact) => {
+        console.log(updatedContact);
         if (updatedContact.name === "") {
             return { status: "failure", msg: "Please Enter a valid Name" };
         } else if (updatedContact.phone === "") {
@@ -145,9 +146,9 @@ class ContactIndex extends React.Component {
             return {
                 selectedContact: contact,
                 isUpdating: true,
-            }
-        })
-    }
+            };
+        });
+    };
 
     handleCancelUpdateContact = (contact) => {
         console.log(contact);
@@ -155,9 +156,9 @@ class ContactIndex extends React.Component {
             return {
                 selectedContact: undefined,
                 isUpdating: false,
-            }
-        })
-    }
+            };
+        });
+    };
 
     render() {
         return (
@@ -165,7 +166,7 @@ class ContactIndex extends React.Component {
                 <Header />
                 <div className="container" style={{ minHeight: "85vh" }}>
                     <div className="row py-3">
-                        <div className="col-4 offset-2">
+                        <div className="col-4 offset-2 row">
                             <AddRandomContact
                                 handleAddRandomContact={this.handleAddRandomContact}
                             />
@@ -187,30 +188,34 @@ class ContactIndex extends React.Component {
                             </div>
                         </div>
                         <div className="row py-2">
-                            <FavoriteContacts
-                                contacts={this.state.contactList.filter(
-                                    (u) => u.isFavorite === true
-                                )}
-                                favoriteClick={this.handleToggleFavorites}
-                                deleteContact={this.handleDeleteContact}
-                                updateClick={this.handleUpdateClick}
-                            />
+                            <div className="col-8 offset-2 row">
+                                <FavoriteContacts
+                                    contacts={this.state.contactList.filter(
+                                        (u) => u.isFavorite === true
+                                    )}
+                                    favoriteClick={this.handleToggleFavorites}
+                                    deleteContact={this.handleDeleteContact}
+                                    updateClick={this.handleUpdateClick}
+                                />
+                            </div>
                         </div>
                         <div className="row py-2">
-                            <GeneralContacts
-                                contacts={this.state.contactList.filter(
-                                    (u) => u.isFavorite === false
-                                )}
-                                favoriteClick={this.handleToggleFavorites}
-                                deleteContact={this.handleDeleteContact}
-                                updateClick={this.handleUpdateClick}
-                            />
+                            <div className="col-8 offset-2 row">
+                                <GeneralContacts
+                                    contacts={this.state.contactList.filter(
+                                        (u) => u.isFavorite === false
+                                    )}
+                                    favoriteClick={this.handleToggleFavorites}
+                                    deleteContact={this.handleDeleteContact}
+                                    updateClick={this.handleUpdateClick}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
                 <Footer />
             </div>
-        )
+        );
     }
 }
 

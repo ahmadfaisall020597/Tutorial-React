@@ -1,6 +1,6 @@
 import Contact from "./Contact";
 
-export default function FavoriteContact(props) {
+const FavoriteContacts = (props) => {
     return (
         <div
             className="col-12 py-2"
@@ -19,5 +19,7 @@ export default function FavoriteContact(props) {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default FavoriteContacts;

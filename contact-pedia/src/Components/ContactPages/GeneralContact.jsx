@@ -1,6 +1,6 @@
-import Contact from "./Contact"
+import Contact from "./Contact";
 
-export default function GeneralContact(props) {
+const GeneralContacts = (props) => {
     return (
         <div
             className="col-12 py-2"
@@ -19,5 +19,7 @@ export default function GeneralContact(props) {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default GeneralContacts;
