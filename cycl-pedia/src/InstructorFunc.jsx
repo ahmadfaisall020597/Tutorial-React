@@ -18,4 +18,4 @@ const InstructorFunc = (props) => {
     );
 }
 
-export default IntructorFunc;
+export default InstructorFunc;
