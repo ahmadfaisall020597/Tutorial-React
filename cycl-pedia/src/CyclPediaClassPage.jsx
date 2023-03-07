@@ -17,7 +17,7 @@ class CyclPediaClassPage extends React.Component {
 
     componentDidMount = async () => {
         console.log("Component Did Mount");
-        if (JSON.parse(localStorage.getItem("cylcopediaState"))) {
+        if (JSON.parse(localStorage.getItem("cylcpediaState"))) {
         } else {
             const response = await getRandomUser();
             console.log(response);
@@ -35,8 +35,9 @@ class CyclPediaClassPage extends React.Component {
 
     componentDidUpdate() {
         console.log("Component Did Update");
-        localStorage.setItem("cylcopediaState", JSON.stringify(this.state));
+        localStorage.setItem("cylcpediaState", JSON.stringify(this.state));
     }
+
 
     componentWillUnmount() {
         console.log("Component Will UnMount");
@@ -58,13 +59,29 @@ class CyclPediaClassPage extends React.Component {
         })
     }
 
+    handletoggleInstructor = () => {
+        this.setState((prevState) => {
+            return {
+                hideInstructor: !prevState.hideInstructor,
+            };
+        });
+    };
+
     render() {
         console.log("Render Component");
         return (
             <div>
-                {this.state.instructor && (
-                    <Instructor instructor={this.state.instructor} />
-                )}
+                <div className="p-3">
+                    <span className="h4 text-success">Instructor &nbsp;</span>
+                    <i
+                        className={` bi ${this.state.hideInstructor ? "bi-toggle-off" : "bi-toggle-on"
+                            } btn btn-success btn-sm`}
+                        onClick={this.handletoggleInstructor}
+                    ></i>
+                    {!this.state.hideInstructor && this.state.instructor ? (
+                        <Instructor instructor={this.state.instructor} />
+                    ) : null}
+                </div>
 
                 <div className="p-3">
                     <span className="h4 text-success">Feedback</span>
@@ -85,10 +102,9 @@ class CyclPediaClassPage extends React.Component {
                             this.setState({ inputFeedback: e.target.value });
                         }}
                         placeholder="Feedback..."
-                    ></textarea>{" "}
+                    ></textarea> {" "}
                     Value : {this.state.inputFeedback}
                 </div>
-
                 <div className="p-3">
                     <span className="h4 text-success">Students</span> <br />
                     <div>Student Count : {this.state.studentCount}</div>
